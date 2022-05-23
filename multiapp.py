@@ -52,9 +52,7 @@ class MultiApp:
         functions = [a["function"] for a in self.apps]
         default_radio = titles.index(app_state["page"]) if "page" in app_state else 0
 
-        st.sidebar.title("Navigation")
-
-        title = st.sidebar.radio("Go To", titles, index=default_radio, key="radio")
+        title = st.sidebar.radio("About", titles, index=default_radio, key="radio")
 
         app_state["page"] = st.session_state.radio
         # st.write('after', app_state)
@@ -63,7 +61,6 @@ class MultiApp:
         # st.experimental_set_query_params(**st.session_state.to_dict())
         functions[titles.index(title)]()
 
-        st.sidebar.title("India's Open Natural Ecosystems")
         st.sidebar.info(
             """
             India is endowed with a diversity of terrestrial biomes. Barring
@@ -88,7 +85,7 @@ class MultiApp:
             in this [preprint](https://www.essoar.org/doi/10.1002/essoar.10507612.1).
         """
         )
-        st.sidebar.title("Funding and support")
+        st.sidebar.header("Funding and support")
         st.sidebar.info(
             """
             Financial support for various aspects of this mapping work came from
