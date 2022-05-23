@@ -63,19 +63,47 @@ class MultiApp:
         # st.experimental_set_query_params(**st.session_state.to_dict())
         functions[titles.index(title)]()
 
-        st.sidebar.title("Contribute")
-        st.sidebar.info(
-            "This is an open source project and you are very welcome to contribute your "
-            "comments, questions, resources and apps as "
-            "[issues](https://github.com/giswqs/streamlit-geospatial/issues) or "
-            "[pull requests](https://github.com/giswqs/streamlit-geospatial/pulls) "
-            "to the [source code](https://github.com/giswqs/streamlit-geospatial). "
-        )
-        st.sidebar.title("About")
+        st.sidebar.title("India's Open Natural Ecosystems")
         st.sidebar.info(
             """
-            This web [app](https://share.streamlit.io/giswqs/streamlit-geospatial/app.py) is maintained by [Qiusheng Wu](https://wetlands.io). You can follow me on social media:
-             [GitHub](https://github.com/giswqs) | [Twitter](https://twitter.com/giswqs) | [YouTube](https://www.youtube.com/c/QiushengWu) | [LinkedIn](https://www.linkedin.com/in/qiushengwu).
-            This web app URL: <https://streamlit.geemap.org>
+            India is endowed with a diversity of terrestrial biomes. Barring
+            forests—areas of closed tree canopies—they comprise diverse
+            naturally open and often treeless habitats that support their own
+            rich and unique complement of plant and animal life. Further,
+            for centuries, such diversity has thrived alongside unique pastoral
+            and agro-pastoral communities that have shared space with nature
+            in this biome, while deriving identity, sustenance and livelihood from it.
+
+            Together, these Open Natural Ecosystems stretch across a vast
+            area comprising some 15% of the land area in India's semi-arid zone.
+            The threats they face are vast too. Not only are they
+            disregarded for their unique ecological, cultural and livelihood values,
+            but they are also targets of huge government schemes and programmes for
+            well-intentioned developmental purposes that lead to serious
+            unintended negative consequences.
+
+            A previous effort to map the extent of these ONEs can be seen
+            [here](https://mdm.users.earthengine.app/view/open-natural-ecosystems),
+            with its methods and data freely and publicly accessible
+            in this [preprint](https://www.essoar.org/doi/10.1002/essoar.10507612.1).
+        """
+        )
+        st.sidebar.title("Funding and support")
+        st.sidebar.info(
+            """
+            Financial support for various aspects of this mapping work came from
+            [Azim Premji University](https://azimpremjiuniversity.edu.in/)
+            as part of the Research Funding Programme 2020,
+            and from the [National Centre for Biological Sciences](https://www.ncbs.res.in/),
+            its [Archives](https://archives.ncbs.res.in/),
+            the Nadathur Foundation, [TNQ Technologies](http://www.tnq.co.in/)
+            and [ATREE](https://www.atree.org/).
+
+            This work would not have been possible without the generosity of efforts behind
+            many free and open source scientific computation resources and software tools,
+            chief among them being [{geemap}](https://geemap.org/) and
+            [Spatial Thoughts](https://spatialthoughts.com/). These analyses
+            were carried out on the [Google Earth Engine](https://earthengine.google.com/)
+            cloud computing platform.
         """
         )
