@@ -97,10 +97,10 @@ class MultiApp:
             and [ATREE](https://www.atree.org/).
 
             This work would not have been possible without the generosity of efforts behind
-            many free and open source scientific computation resources and software tools,
-            chief among them being [{geemap}](https://geemap.org/) and
-            [Spatial Thoughts](https://spatialthoughts.com/). These analyses
-            were carried out on the [Google Earth Engine](https://earthengine.google.com/)
+            many free, public and open source scientific computation resources and software tools,
+            chief among them being [{geemap}](https://geemap.org/),
+            [Spatial Thoughts](https://spatialthoughts.com/) and [QGIS](https://qgis.org/).
+            These analyses were carried out on the [Google Earth Engine](https://earthengine.google.com/)
             cloud computing platform.
         """
         )
