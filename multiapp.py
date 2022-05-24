@@ -48,6 +48,8 @@ class MultiApp:
 
         # st.write('before', app_state)
 
+        st.sidebar.warning("⚠ ️️︎This is a **PRE-RELEASE ALPHA VERSION** of the map. Its final version will be made public shortly. ⚠")
+
         titles = [a["title"] for a in self.apps]
         functions = [a["function"] for a in self.apps]
         default_radio = titles.index(app_state["page"]) if "page" in app_state else 0

@@ -7,7 +7,6 @@ import matplotlib
 
 def app():
     st.title("Open Natural Ecosystems & Their LandCover Types", anchor = "onelandcovers")
-    st.warning("⚠ ️️︎This is a **PRE-RELEASE ALPHA VERSION** of the map. Its final version will be made public shortly. ⚠")
 
     m = geemap.Map(location=(21, 79), zoom=5.2)
     one = ee.Image(
