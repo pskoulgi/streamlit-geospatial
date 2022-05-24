@@ -46,10 +46,10 @@ def app():
                               "Dune": matplotlib.colors.cnames["khaki"],
                             "Ravine": matplotlib.colors.cnames["fuchsia"],
                             "Saline": matplotlib.colors.cnames["lightsteelblue"],
-                              "Bare": matplotlib.colors.cnames["beige"],
-                    "Savanna (open)": matplotlib.colors.cnames["yellow"],
-                   "Savanna (shrub)": matplotlib.colors.cnames["goldenrod"],
-                "Savanna (woodland)": matplotlib.colors.cnames["greenyellow"]
+        "Bare or sparsely vegetated": matplotlib.colors.cnames["beige"],
+                      "Open Savanna": matplotlib.colors.cnames["yellow"],
+                     "Shrub Savanna": matplotlib.colors.cnames["goldenrod"],
+                  "Woodland Savanna": matplotlib.colors.cnames["greenyellow"]
     }
 
     vis_params = {
