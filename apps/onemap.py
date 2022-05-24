@@ -15,7 +15,11 @@ def app():
     )
     top1 = one.select("top1LabelNum")
     top1OrigLabels = [i for i in range(1, 13)]
-    top1RemappedLabels = [8, 8, 1, 8, 2, 8, 3, 4, 5, 6, 7,  8]
+    # Order classes as "others", localized ONEs, ONEs from bare thru woodland savanna
+    top1RemappedLabels = [1, 1, 5, 1, 2, 1, 3, 4, 6, 7, 8,  1]
+    # Order classes by alphabetical order among ONEs, "others" last
+    # top1RemappedLabels = [8, 8, 1, 8, 2, 8, 3, 4, 5, 6, 7,  8]
+    # Non-ONEs simply mapped to 1: has 1 thru 11 with gaps => not good for applying discrete palette (?)
     # top1RemappedLabels = [1, 1, 3, 1, 5, 1, 7, 8, 9, 10, 11,  1]
     top1NonONEsCollapsed = top1.remap(** {"from": top1OrigLabels, "to": top1RemappedLabels})
     probsArrayIm = one.select(ee.List.sequence(0, 11)).toArray()
@@ -38,14 +42,14 @@ def app():
         ).map(lambda f: f.simplify(1000)) \
         .geometry(1000)
 
-    legendDict = {            "Bare": matplotlib.colors.cnames["beige"],
+    legendDict = {          "Others": matplotlib.colors.cnames["black"],
                               "Dune": matplotlib.colors.cnames["khaki"],
                             "Ravine": matplotlib.colors.cnames["fuchsia"],
                             "Saline": matplotlib.colors.cnames["lightsteelblue"],
+                              "Bare": matplotlib.colors.cnames["beige"],
                     "Savanna (open)": matplotlib.colors.cnames["yellow"],
                    "Savanna (shrub)": matplotlib.colors.cnames["goldenrod"],
-                "Savanna (woodland)": matplotlib.colors.cnames["greenyellow"],
-                            "Others": matplotlib.colors.cnames["black"]
+                "Savanna (woodland)": matplotlib.colors.cnames["greenyellow"]
     }
 
     vis_params = {
