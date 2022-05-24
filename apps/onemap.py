@@ -34,7 +34,7 @@ def app():
             ['KARNATAKA', 'KERALA', 'TAMIL NADU', 'ANDHRA PRADESH', 'TELANGANA',
              'MAHARASHTRA', 'MADHYA PRADESH', 'CHHATTISGARH', 'ODISHA', 'JHARKHAND',
              'BIHAR', 'UTTAR PRADESH', 'DELHI', 'PUNJAB', 'HARYANA', 'RAJASTHAN',
-             'GUJARAT'])
+             'GUJARAT', 'GOA'])
         ).map(lambda f: f.simplify(1000)) \
         .geometry(1000)
 
