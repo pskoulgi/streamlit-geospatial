@@ -9,26 +9,10 @@ def app():
     st.title("Open Natural Ecosystems & Their LandCover Types", anchor = "onelandcovers")
 
     m = geemap.Map(location=(21, 79), zoom=5.2)
-    one = ee.Image(
-        "projects/ee-open-natural-ecosystems/assets/finalSprint/globalModelGbtBiomeZonesOhe/prediction"
-    )
-    top1 = one.select("top1LabelNum")
-    top1OrigLabels = [i for i in range(1, 13)]
-    # Order classes as "others", localized ONEs, ONEs from bare thru woodland savanna
-    top1RemappedLabels = [1, 1, 5, 1, 2, 1, 3, 4, 6, 7, 8,  1]
-    # Order classes by alphabetical order among ONEs, "others" last
-    # top1RemappedLabels = [8, 8, 1, 8, 2, 8, 3, 4, 5, 6, 7,  8]
-    # Non-ONEs simply mapped to 1: has 1 thru 11 with gaps => not good for applying discrete palette (?)
-    # top1RemappedLabels = [1, 1, 3, 1, 5, 1, 7, 8, 9, 10, 11,  1]
-    top1NonONEsCollapsed = top1.remap(** {"from": top1OrigLabels, "to": top1RemappedLabels})
-    probsArrayIm = one.select(ee.List.sequence(0, 11)).toArray()
-    oneArrayMask = ee.Image(ee.Array([0,0,1,0,1,0,1,1,1,1,1,0]))
-    oneProb = probsArrayIm.arrayMask(oneArrayMask) \
-        .arrayReduce(ee.Reducer.sum(), [0]) \
-        .select(0) \
-        .arrayProject([0]) \
-        .arrayFlatten([['oneProb']])
-    # top1Prob = probsArrayIm.arrayReduce(ee.Reducer.max(), [0]).select(0).arrayProject([0]).arrayFlatten([['top1Prob']])
+
+    oneLabelsCollapsedForViz = ee.Image("projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/labelAndUncert")
+    top1NonONEsCollapsed = oneLabelsCollapsedForViz.select("top1NonONECollapsed")
+    oneProb = oneLabelsCollapsedForViz.select("oneProb")
 
     indiaStates = ee.FeatureCollection("users/mdm/india_soiStates")
     oneStates = indiaStates.filter(
