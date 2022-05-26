@@ -37,20 +37,8 @@ def app():
 
     m = geemap.Map(location=(21, 79), zoom=5.2)
 
-    oneLabelsCollapsedForViz = ee.Image("projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/labelAndUncert")
-    top1NonONEsCollapsed = oneLabelsCollapsedForViz.select("top1NonONECollapsed")
-    oneProb = oneLabelsCollapsedForViz.select("oneProb")
-
-    indiaStates = ee.FeatureCollection("users/mdm/india_soiStates")
-    oneStates = indiaStates.filter(
-        ee.Filter.inList(
-            'state',
-            ['KARNATAKA', 'KERALA', 'TAMIL NADU', 'ANDHRA PRADESH', 'TELANGANA',
-             'MAHARASHTRA', 'MADHYA PRADESH', 'CHHATTISGARH', 'ODISHA', 'JHARKHAND',
-             'BIHAR', 'UTTAR PRADESH', 'DELHI', 'PUNJAB', 'HARYANA', 'RAJASTHAN',
-             'GUJARAT', 'GOA'])
-        ).map(lambda f: f.simplify(1000)) \
-        .geometry(1000)
+    oneLabelsCollapsedForViz = ee.Image("projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/labelWithUncertAppliedONEStates")
+    top1NonONEsCollapsed = oneLabelsCollapsedForViz
 
     legendDict = {          "Others": matplotlib.colors.cnames["black"],
                               "Dune": matplotlib.colors.cnames["khaki"],
@@ -69,7 +57,7 @@ def app():
     }
 
     m.add_basemap("SATELLITE")
-    m.addLayer(top1NonONEsCollapsed.updateMask(oneProb).clip(oneStates), vis_params, "ONE LandCover Types", True, 1)
+    m.addLayer(top1NonONEsCollapsed, vis_params, "ONE LandCover Types", True, 1)
     m.add_legend(legend_title = "Landcover types", legend_dict = legendDict)
 
     m.to_streamlit(height = 768)
