@@ -95,7 +95,7 @@ class MultiApp:
             as part of the Research Funding Programme 2020,
             and from the [National Centre for Biological Sciences](https://www.ncbs.res.in/),
             its [Archives](https://archives.ncbs.res.in/),
-            the Nadathur Foundation, [TNQ Technologies](http://www.tnq.co.in/)
+            the Nadathur Foundation, [TNQ Technologies](https://www.tnq.co.in/csr-activities/)
             and [ATREE](https://www.atree.org/).
 
             This work would not have been possible without the generosity of efforts behind
