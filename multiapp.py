@@ -63,7 +63,7 @@ class MultiApp:
         # st.experimental_set_query_params(**st.session_state.to_dict())
         functions[titles.index(title)]()
 
-        st.sidebar.info(
+        st.sidebar.markdown(
             """
             India is endowed with a diversity of terrestrial biomes. Barring
             forests—areas of closed tree canopies—they comprise diverse
@@ -88,7 +88,7 @@ class MultiApp:
         """
         )
         st.sidebar.header("Funding and support")
-        st.sidebar.info(
+        st.sidebar.markdown(
             """
             Financial support for various aspects of this mapping work came from
             [Azim Premji University](https://azimpremjiuniversity.edu.in/)
