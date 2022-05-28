@@ -1,10 +1,9 @@
-# streamlit-geospatial
+# India's Open Natural Ecosystems - a visualization
 
-A multi-page streamlit app for the geospatial community.
+A web app to visualize a map of some important Open Natural Ecosystems (ONE) in India.
 
-- Web app: <https://streamlit.geemap.org>
-- Source code: <https://github.com/giswqs/streamlit-geospatial>
+- Web app: <https://share.streamlit.io/pskoulgi/streamlit-geospatial/oneviz/app.py>
 
-## Real Estate Data and Market Trends
-
-![](https://i.imgur.com/Z3dk6Tr.gif)
+| :warning: This is a PRE-RELEASE ALPHA version of the map. |
+|:---------------------------|
+| Its final version will be released soon.      |
