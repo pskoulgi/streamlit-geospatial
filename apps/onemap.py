@@ -77,6 +77,6 @@ def app():
 
     m.add_basemap("SATELLITE")
     m.addLayer(top1NonONEsCollapsed, vis_params, "ONE LandCover Types", True, 1)
-    m.add_legend(legend_title = "Landcover types", legend_dict = legendDict)
+    m.add_legend(title = "Landcover types", legend_dict = legendDict)
 
     m.to_streamlit(height = 768)
