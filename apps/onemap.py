@@ -1,8 +1,8 @@
 # apps/new_app.py
 
 import streamlit as st
-import geemap.foliumap as geemap
 import ee
+import geemap.foliumap as geemap
 import matplotlib
 
 def app():
