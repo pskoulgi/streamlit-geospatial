@@ -101,7 +101,7 @@ def app():
             Tree cover is moderate. Large openings in the tree canopy cover remain,
             and the understorey is predominantly grasses.""")
 
-    m = geemap.Map(center=(21, 79), zoom=5.2)
+    m = geemap.Map(center=[21, 79], zoom=5.2)
 
     oneLabelsCollapsedForViz = ee.Image("projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/labelWithUncertAppliedONEStates")
     top1NonONEsCollapsed = oneLabelsCollapsedForViz
