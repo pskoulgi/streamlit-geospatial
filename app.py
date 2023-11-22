@@ -103,8 +103,8 @@ def app():
 
     m = geemap.Map(center=[21, 79], zoom=5.2)
 
-    oneLabelsCollapsedForViz = ee.Image("projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/labelWithUncertAppliedONEStates")
-    top1NonONEsCollapsed = oneLabelsCollapsedForViz
+    # oneLabelsCollapsedForViz = ee.Image("projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/labelWithUncertAppliedONEStates")
+    # top1NonONEsCollapsed = oneLabelsCollapsedForViz
 
     legendDict = {          "Others": matplotlib.colors.cnames["black"],
                               "Dune": matplotlib.colors.cnames["khaki"],
@@ -123,7 +123,7 @@ def app():
     }
 
     m.add_basemap("SATELLITE")
-    m.addLayer(top1NonONEsCollapsed, vis_params, "ONE LandCover Types", True, 1)
+    # m.addLayer(top1NonONEsCollapsed, vis_params, "ONE LandCover Types", True, 1)
     m.add_legend(title = "Landcover types", legend_dict = legendDict)
 
     m.to_streamlit(height = 768)
