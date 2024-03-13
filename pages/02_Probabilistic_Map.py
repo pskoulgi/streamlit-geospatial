@@ -45,7 +45,7 @@ def app():
     oneProb = l2OneProbs.reduce(ee.Reducer.sum()).rename("one")
     agrProb = l2NononeProbs.select(["prob_nonone_agri_.*"]).reduce(ee.Reducer.sum()).rename("agr")
     othProb = l2NononeProbs.select("prob_nonone_forest").rename("oth")
-    oneAgrOthRgb = ee.Image.cat([oneProb, agrProb, othProb])
+    oneAgrOthRgb = ee.Image.cat([agrProb, oneProb, othProb])
 
     m.add_basemap("SATELLITE")
     left_layer = geemap.ee_tile_layer(l1Probs, {"bands": ["prob_one"], "min": 0, "max": 1}, name = "ONE")
