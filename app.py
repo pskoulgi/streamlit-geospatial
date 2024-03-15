@@ -34,6 +34,8 @@ with col3:
 with col4:
     st.page_link("pages/99_Funding_and_Support.py", label="**Funding and Support**", use_container_width=True)
 
+st.divider()
+
 st.title("Open Land Cover Mapping of India's Semi-arid Open Natural Ecosystems (ONE)")
 
 st.info("Explore the map from pages on the left sidebar.")

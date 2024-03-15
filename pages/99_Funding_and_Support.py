@@ -18,6 +18,8 @@ with col3:
 with col4:
     st.page_link("pages/99_Funding_and_Support.py", label="**Funding and Support**", use_container_width=True)
 
+st.divider()
+
 st.sidebar.title("GitHub")
 st.sidebar.info(
     """

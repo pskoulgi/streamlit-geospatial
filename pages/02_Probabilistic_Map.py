@@ -38,6 +38,8 @@ with col3:
 with col4:
     st.page_link("pages/99_Funding_and_Support.py", label="**Funding and Support**", use_container_width=True)
 
+st.divider()
+
 def app():
     st.title("Probabilistic Map of Open Natural Ecosystems", anchor = "onelandcovers")
 
