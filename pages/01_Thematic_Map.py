@@ -27,6 +27,17 @@ st.sidebar.markdown(
     """
 )
 
+col1, col2, col3, col4 = st.columns(4)
+
+with col1:
+    st.page_link("app.py", label="Home", icon="🏠", use_container_width=True)
+with col2:
+    st.page_link("pages/01_Thematic_Map.py", label="**Thematic Map**", use_container_width=True)
+with col3:
+    st.page_link("pages/02_Probabilistic_Map.py", label="**Probabilistic Map**", use_container_width=True)
+with col4:
+    st.page_link("pages/99_Funding_and_Support.py", label="**Funding and Support**", use_container_width=True)
+
 def app():
     st.title("Thematic Map of Open Natural Ecosystems", anchor = "onelandcovers")
 
