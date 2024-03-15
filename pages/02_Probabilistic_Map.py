@@ -5,7 +5,7 @@ import ee
 import geemap.foliumap as geemap
 import matplotlib
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_title="India's ONE | Probabilistic Map")
 
 st.sidebar.title("GitHub")
 st.sidebar.info(

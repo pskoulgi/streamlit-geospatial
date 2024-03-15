@@ -1,7 +1,7 @@
 import streamlit as st
 import leafmap.foliumap as leafmap
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide", page_title="India's ONE")
 
 st.sidebar.title("GitHub")
 st.sidebar.info(
