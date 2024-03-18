@@ -45,7 +45,7 @@ def app():
 
     m = geemap.Map(center=(21, 79), zoom=5.2)
 
-    mapRaster = ee.Image("projects/ee-open-natural-ecosystems/assets/homeStretch2023/globalModelGbt_readjLabels2024R2_CpyHtPlsScnsIncl_BiomeZonesOhe_hier/prediction_expHierMult")
+    mapRaster = ee.Image("projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/landcover_hier")
     l2OneProbs = mapRaster.select(["prob_one_.*"]).divide(1e4)
     l2NononeProbs = mapRaster.select(["prob_nonone_.*"]).divide(1e4)
     l1Probs = mapRaster.select(["prob_one", "prob_nonone"]).divide(1e4)

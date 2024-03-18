@@ -91,7 +91,7 @@ def app():
 
     m = geemap.Map(center=(21, 79), zoom=5.2)
 
-    mapRaster = ee.Image("projects/ee-open-natural-ecosystems/assets/homeStretch2023/globalModelGbt_readjLabels2024R2_CpyHtPlsScnsIncl_BiomeZonesOhe_hier/prediction_expHierMult")
+    mapRaster = ee.Image("projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/landcover_hier")
     l2Labels = mapRaster.select("l2LabelNum") \
         .remap([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
                [1, 1, 5, 1, 2, 1, 3, 4, 6,  7,  8,  1])
