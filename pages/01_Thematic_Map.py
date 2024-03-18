@@ -7,7 +7,7 @@ import matplotlib
 
 st.set_page_config(layout="wide", page_title="India's ONE | Thematic Map")
 
-st.sidebar.title("GitHub")
+st.sidebar.title("Project Repository")
 st.sidebar.info(
     """
     [https://github.com/openlandcover/](https://github.com/openlandcover/)
@@ -43,9 +43,9 @@ with col5:
 st.divider()
 
 def app():
-    st.title("Thematic Map of Open Natural Ecosystems", anchor = "onelandcovers")
+    st.title("Thematic Map of Open Natural Ecosystems", anchor = "landcovers-thematic")
 
-    with st.expander("See a brief description of the types of ONE"):
+    with st.expander("**See a brief description of the types of ONE**"):
         col11, col12 = st.columns([1, 4])
         col11.markdown("**_Others_**")
         col12.markdown("""
@@ -115,7 +115,7 @@ def app():
         "max": 9,
         "palette": list(oneTypeslegendDict.values()),
     }
-    onelegendDict = { "Others": "#1a2b2b",
+    onelegendDict = {"Non-ONE": "#1a2b2b",
                          "ONE": matplotlib.colors.cnames["navajowhite"]}
     one_vis_params = {
         "min": 0,

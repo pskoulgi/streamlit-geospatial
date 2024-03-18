@@ -3,7 +3,7 @@ import leafmap.foliumap as leafmap
 
 st.set_page_config(layout="wide", page_title="India's ONE")
 
-st.sidebar.title("GitHub")
+st.sidebar.title("Project Repository")
 st.sidebar.info(
     """
     [https://github.com/openlandcover/](https://github.com/openlandcover/)
@@ -39,8 +39,6 @@ with col5:
 st.divider()
 
 st.title("Open Land Cover Mapping of India's Semi-arid Open Natural Ecosystems (ONE)")
-
-st.info("Explore the map from pages on the left sidebar.")
 
 st.markdown(
     """

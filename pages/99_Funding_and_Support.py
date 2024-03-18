@@ -22,7 +22,7 @@ with col5:
 
 st.divider()
 
-st.sidebar.title("GitHub")
+st.sidebar.title("Project Repository")
 st.sidebar.info(
     """
     [https://github.com/openlandcover/](https://github.com/openlandcover/)
@@ -46,20 +46,24 @@ def app():
     st.title("Funding and support")
 
     """
-    Financial support for various aspects of this mapping work came from
-    [Azim Premji University](https://azimpremjiuniversity.edu.in/)
-    as part of the Research Funding Programme 2020,
-    and from the [National Centre for Biological Sciences](https://www.ncbs.res.in/),
-    its [Archives](https://archives.ncbs.res.in/),
-    the Nadathur Foundation, [TNQ Technologies](https://www.tnq.co.in/csr-activities/),
-    [ATREE](https://www.atree.org/) and [The Habitats Trust](https://www.thehabitatstrust.org/).
-    [Nature Conservation Foundation](https://www.ncf-india.org/) provided technical and logistical support.
+    Financial support for various aspects of this mapping work came from:
+    * [Azim Premji University](https://azimpremjiuniversity.edu.in/) as part of the Research Funding Programme 2020
+    * [National Centre for Biological Sciences (NCBS)](https://www.ncbs.res.in/)
+    * [Archives at NCBS](https://archives.ncbs.res.in/)
+    * Nadathur Foundation
+    * [TNQ Technologies](https://www.tnq.co.in/csr-activities/)
+    * [ATREE](https://www.atree.org/)
+    * [The Habitats Trust](https://www.thehabitatstrust.org/)
+    * [Nature Conservation Foundation](https://www.ncf-india.org/) provided technical and logistical support
 
     This work would not have been possible without the generosity of efforts behind
     many free, public and open source scientific computation resources and software tools,
-    chief among them being [{geemap}](https://geemap.org/),
-    [Spatial Thoughts](https://spatialthoughts.com/), [QGIS](https://qgis.org/)
-    and [awesome-gee-community-catalog](https://gee-community-catalog.org/).
+    chief among them being:
+    * [{geemap}](https://geemap.org/)
+    * [Spatial Thoughts](https://spatialthoughts.com/)
+    * [QGIS](https://qgis.org/)
+    * [awesome-gee-community-catalog](https://gee-community-catalog.org/)
+    
     These analyses were carried out on the [Google Earth Engine](https://earthengine.google.com/)
     cloud computing platform.
     """
