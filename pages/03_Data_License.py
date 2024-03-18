@@ -66,17 +66,21 @@ def app():
     st.dataframe(band_names_styled, height = 670, use_container_width=True, hide_index=True)
 
    
-    l1_label_num = pd.read_excel("./band_data.xlsx", sheet_name="l1LabelNum")
-    l1_label_num_styled = l1_label_num.style.applymap(colour_cells, subset=['CSS_Colour'])
+    # l1_label_num = pd.read_excel("./band_data.xlsx", sheet_name="l1LabelNum")
+    # l1_label_num_styled = l1_label_num.style.applymap(colour_cells, subset=['CSS_Colour'])
+    l1_label_num = pd.read_excel("./band_data.xlsx", sheet_name="l1LabelNum", usecols=["Value", "Label"])
     st.write("## Band Values")
     st.write("BAND: l1LabelNum | Level 1 Labels Numeric")
-    st.dataframe(l1_label_num_styled, width=800, use_container_width=True, hide_index=True)
+    # st.dataframe(l1_label_num_styled, width=800, use_container_width=True, hide_index=True)
+    st.dataframe(l1_label_num, use_container_width=False, hide_index=True)
 
 
-    l2_label_num = pd.read_excel("./band_data.xlsx", sheet_name="l2LabelNum")
-    l2_label_num_styled = l2_label_num.style.applymap(colour_cells, subset=['CSS_Colour'])
+    # l2_label_num = pd.read_excel("./band_data.xlsx", sheet_name="l2LabelNum")
+    # l2_label_num_styled = l2_label_num.style.applymap(colour_cells, subset=['CSS_Colour'])
+    l2_label_num = pd.read_excel("./band_data.xlsx", sheet_name="l2LabelNum", usecols=["Value", "Label"])
     st.write("BAND: l2LabelNum | Level 2 Labels Numeric")
-    st.dataframe(l2_label_num_styled, height = 460, width=800, use_container_width=True, hide_index=True)
+    # st.dataframe(l2_label_num_styled, height = 460, width=800, use_container_width=True, hide_index=True)
+    st.dataframe(l2_label_num, height = 460, use_container_width=True, hide_index=True)
 
     st.write("## Data & Code License")
     st.write("All map data and analysis code are available freely for open public use, under [MIT License](https://mit-license.org/). While not required, we would appreciate if you attribute the source. Suggested citation:???")   
