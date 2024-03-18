@@ -57,7 +57,7 @@ def app():
 
     m.add_basemap("SATELLITE")
     left_layer = geemap.ee_tile_layer(l1Probs, {"bands": ["prob_one"], "min": 0, "max": 1}, name = "ONE")
-    right_layer = geemap.ee_tile_layer(oneAgrOthRgb, {"min": 0, "max": 1}, name = "ONE-Agri-For probabilities")
+    right_layer = geemap.ee_tile_layer(oneAgrOthRgb, {"min": 0, "max": 1}, name = "Agri-ONE-Forest probabilities")
     m.split_map(left_layer, right_layer)
 
     m.to_streamlit(height = 768)
