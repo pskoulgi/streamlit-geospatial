@@ -124,8 +124,8 @@ def app():
     left_layer = geemap.ee_tile_layer(l1Labels, one_vis_params, name = "ONE")
     right_layer = geemap.ee_tile_layer(l2Labels, oneTypes_vis_params, name = "Types of ONE")
     m.split_map(left_layer, right_layer)
-    m.add_legend(title = "ONE types", legend_dict = oneTypeslegendDict)
-    m.add_legend(title = "ONE", legend_dict = onelegendDict, position = "bottomleft")
+    m.add_legend(title = "ONE types", legend_dict = oneTypeslegendDict, draggable = False)
+    m.add_legend(title = "ONE", legend_dict = onelegendDict, position = "bottomleft", draggable = False)
 
     m.to_streamlit(height = 768)
 
