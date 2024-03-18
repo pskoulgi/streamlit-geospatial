@@ -96,11 +96,12 @@ def app():
     mapRaster = ee.Image("projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/landcover_hier")
     l2Labels = mapRaster.select("l2LabelNum") \
         .remap([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-               [1, 1, 5, 1, 2, 1, 3, 4, 6,  7,  8,  1])
+               [1, 1, 6, 1, 3, 2, 4, 5, 7,  8,  9,  1])
     l1Labels = mapRaster.select("l1LabelNum") \
         .remap([200, 100], [1, 0])
 
     oneTypeslegendDict = {  "Others": matplotlib.colors.cnames["black"],
+                            "Forest": matplotlib.colors.cnames["darkgreen"],
                               "Dune": matplotlib.colors.cnames["khaki"],
                             "Ravine": matplotlib.colors.cnames["fuchsia"],
                             "Saline": matplotlib.colors.cnames["lightsteelblue"],
@@ -111,7 +112,7 @@ def app():
     }
     oneTypes_vis_params = {
         "min": 1,
-        "max": 8,
+        "max": 9,
         "palette": list(oneTypeslegendDict.values()),
     }
     onelegendDict = { "Others": "#1a2b2b",
