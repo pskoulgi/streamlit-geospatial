@@ -6,6 +6,7 @@ dependencies:
   - pip
   - pip:
       - geopandas
+      - pandas
       - keplergl
       - streamlit
       - localtileserver
