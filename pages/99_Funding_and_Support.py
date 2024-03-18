@@ -44,28 +44,41 @@ st.sidebar.markdown(
 
 def app():
     st.title("Funding and support")
-
+    st.markdown(
     """
-    Financial support for various aspects of this mapping work came from:
-    * [Azim Premji University](https://azimpremjiuniversity.edu.in/) as part of the Research Funding Programme 2020
-    * [National Centre for Biological Sciences (NCBS)](https://www.ncbs.res.in/)
-    * [Archives at NCBS](https://archives.ncbs.res.in/)
-    * Nadathur Foundation
-    * [TNQ Technologies](https://www.tnq.co.in/csr-activities/)
-    * [ATREE](https://www.atree.org/)
-    * [The Habitats Trust](https://www.thehabitatstrust.org/)
-    * [Nature Conservation Foundation](https://www.ncf-india.org/) provided technical and logistical support
 
-    This work would not have been possible without the generosity of efforts behind
+    &nbsp;
+    
+    **Financial support for various aspects of this mapping work came from:**
+
+    * 2019-2020: [ATREE](https://www.atree.org/)
+    * 2020-2021: [Azim Premji University](https://azimpremjiuniversity.edu.in/) as part of the Research Funding Programme
+    * 2020-2022: Nadathur Foundation
+    * 2021-2022: [National Centre for Biological Sciences (NCBS)](https://www.ncbs.res.in/) via the [Archives at NCBS](https://archives.ncbs.res.in/), with the support of [TNQ Technologies](https://www.tnq.co.in/csr-activities/)
+    * 2022 onwards: [The Habitats Trust](https://www.thehabitatstrust.org/)
+    
+    &nbsp;
+    
+    **Technical and Logistical Support:**
+    * 2019 onwards: [Nature Conservation Foundation](https://www.ncf-india.org/)
+    * 2021 onwards: [Mahesh Sankaran Lab](https://www.ncbs.res.in/faculty/mahesh), NCBS
+
+    &nbsp;
+    
+    Further, our work would not be possible without the creativity and generosity of efforts of developers behind
     many free, public and open source scientific computation resources and software tools,
     chief among them being:
-    * [{geemap}](https://geemap.org/)
-    * [Spatial Thoughts](https://spatialthoughts.com/)
+    * The [geemap](https://geemap.org/) package | Qiusheng Wu
+    * [Spatial Thoughts](https://spatialthoughts.com/) | Ujaval Gandhi
+    * [awesome-gee-community-catalog](https://gee-community-catalog.org/) | Samapriya Roy
+    * [Google Earth Engine Developers Group](https://groups.google.com/g/google-earth-engine-developers)
+    * [Google Earth Engine on Stack Exchange](https://gis.stackexchange.com/questions/tagged/google-earth-engine)
     * [QGIS](https://qgis.org/)
-    * [awesome-gee-community-catalog](https://gee-community-catalog.org/)
+    * Multiple publicly-funded central and state government portals and repositories
     
     These analyses were carried out on the [Google Earth Engine](https://earthengine.google.com/)
     cloud computing platform.
-    """
+    """, 
+    unsafe_allow_html=True)
     
 app()

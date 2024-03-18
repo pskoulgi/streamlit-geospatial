@@ -53,36 +53,39 @@ def colour_cells(val):
     color = 'black'  # Default text color for better readability
     return f'background-color: {val}; color: {color}'
 
-
 def app():
     
     st.write("# Data Access")
     st.write("The data are publicly available for use on the Google Earth Engine platform at `projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/landcover_hier`, from where they may be used directly in further analyses, or select bands can be downloaded for specific areas of interest, as required. Metadata pertaining to this dataset are presented below.")
     st.write("To help you get started, here is a Google Earth Engine [starter script](https://code.earthengine.google.co.in/02585ca79a284e0be81441c24f8653a7) to load and visualise the data. (Note: Google Earth Engine account needed to run this script)")
+    "&nbsp;"
     
     band_names = pd.read_excel("./band_data.xlsx", sheet_name="bandData")
     band_names_styled = band_names.style.apply(style_header, axis=1)
     st.write("## Summary of Bands in the Dataset")
     st.dataframe(band_names_styled, height = 670, use_container_width=True, hide_index=True)
-
+    "&nbsp;"
    
     # l1_label_num = pd.read_excel("./band_data.xlsx", sheet_name="l1LabelNum")
-    # l1_label_num_styled = l1_label_num.style.applymap(colour_cells, subset=['CSS_Colour'])
     l1_label_num = pd.read_excel("./band_data.xlsx", sheet_name="l1LabelNum", usecols=["Value", "Label"])
+    l1_label_num_styled = l1_label_num.style.apply(style_header, axis=1)
+    # l1_label_num_styled = l1_label_num.style.applymap(colour_cells, subset=['CSS_Colour'])
     st.write("## Band Values")
-    st.write("BAND: l1LabelNum | Level 1 Labels Numeric")
-    # st.dataframe(l1_label_num_styled, width=800, use_container_width=True, hide_index=True)
-    st.dataframe(l1_label_num, use_container_width=False, hide_index=True)
-
-
+    st.write("Band: `l1LabelNum` | Level 1 Labels Numeric")
+    st.dataframe(l1_label_num_styled, use_container_width=False, hide_index=True)
+    "&nbsp;"
+    
     # l2_label_num = pd.read_excel("./band_data.xlsx", sheet_name="l2LabelNum")
-    # l2_label_num_styled = l2_label_num.style.applymap(colour_cells, subset=['CSS_Colour'])
     l2_label_num = pd.read_excel("./band_data.xlsx", sheet_name="l2LabelNum", usecols=["Value", "Label"])
-    st.write("BAND: l2LabelNum | Level 2 Labels Numeric")
-    # st.dataframe(l2_label_num_styled, height = 460, width=800, use_container_width=True, hide_index=True)
-    st.dataframe(l2_label_num, height = 460, use_container_width=True, hide_index=True)
+    l2_label_num_styled = l2_label_num.style.apply(style_header, axis=1)
+    st.write("Band: `l2LabelNum` | Level 2 Labels Numeric")
+    st.dataframe(l2_label_num_styled, height = 460, width = 550,
+            column_config={"Label": st.column_config.Column(label="Label", width="large")}, 
+            hide_index=True)
 
+    "&nbsp;"
     st.write("## Data & Code License")
-    st.write("All map data and analysis code are available freely for open public use, under [MIT License](https://mit-license.org/). While not required, we would appreciate if you attribute the source. Suggested citation:???")   
+    st.write("All map data and analysis code are available freely for open public use, under [MIT License](https://mit-license.org/). While not required, we would appreciate if you attribute the source.")
+    st.write("**Suggested citation:** Koulgi, PS & Madhusudan, MD (2024) Open Land Cover Mapping of India's Semi-arid Open Natural Ecosystems. https://one-india.streamlit.app/")
     
 app()

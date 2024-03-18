@@ -64,4 +64,14 @@ def app():
 
     m.to_streamlit(height = 768)
 
+    st.markdown(
+        """
+        In the map above, the left panel shows the probability of Open Natural Ecosystems (ONE) at the 
+        Level-1 classification (ONE / Non-ONE), while the right panel aggregates the probability of Agriculture (Red), 
+        ONEs (Green), and Forest (Blue) at the Level-2 classification. The brighter and greener a pixel 
+        in the right panel, the higher the probability that it is an ONE; likewise, brighter and redder 
+        a pixel, the higher the probability that it is Agriculture, and the brighter and bluer a pixel, 
+        the higher the probability that it is Forest.
+        """
+    )
 app()
