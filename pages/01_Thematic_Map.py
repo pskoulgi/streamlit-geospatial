@@ -112,8 +112,8 @@ def app():
         "max": 8,
         "palette": list(oneTypeslegendDict.values()),
     }
-    onelegendDict = { "Others": matplotlib.colors.cnames["black"],
-                         "ONE": matplotlib.colors.cnames["white"]}
+    onelegendDict = { "Others": "#1a2b2b",
+                         "ONE": matplotlib.colors.cnames["navajowhite"]}
     one_vis_params = {
         "min": 0,
         "max": 1,

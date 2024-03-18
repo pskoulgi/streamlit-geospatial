@@ -56,7 +56,7 @@ def app():
     oneAgrOthRgb = ee.Image.cat([agrProb, oneProb, othProb])
 
     m.add_basemap("SATELLITE")
-    left_layer = geemap.ee_tile_layer(l1Probs, {"bands": ["prob_one"], "min": 0, "max": 1}, name = "ONE probabilities")
+    left_layer = geemap.ee_tile_layer(l1Probs, {"bands": ["prob_one"], "min": 0, "max": 1, "palette": ["1a2b2b", matplotlib.colors.cnames["navajowhite"]]}, name = "ONE probabilities")
     right_layer = geemap.ee_tile_layer(oneAgrOthRgb, {"min": 0, "max": 1}, name = "Agri-ONE-Forest probabilities")
     m.split_map(left_layer, right_layer)
 
