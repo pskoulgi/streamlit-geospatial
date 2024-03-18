@@ -11,6 +11,7 @@ nbserverproxy
 owslib
 palettable
 pandas
+openpyxl
 plotly
 streamlit
 streamlit-bokeh-events
