@@ -38,7 +38,7 @@ with col5:
 
 st.divider()
 
-st.title("Open Land Cover Mapping of India's Semi-arid Open Natural Ecosystems (ONE)")
+st.title("Open Land Cover Mapping of India's Semi-arid Open Natural Ecosystems (ONEs)")
 
 st.markdown(
     """
@@ -64,5 +64,7 @@ st.markdown(
     in this [publication](https://doi.org/10.1111/jbi.14471).
     """
 )
+
+st.image("./ones_of_india.jpg")
 
 
