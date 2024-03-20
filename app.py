@@ -32,7 +32,7 @@ with col2:
 with col3:
     st.page_link("pages/02_Probabilistic_Map.py", label="**Probabilistic Map**", use_container_width=True)
 with col4:
-    st.page_link("pages/03_Data_License.py", label="**Data and License**", use_container_width=True)
+    st.page_link("pages/03_Data_License.py", label="**Code, Data & License**", use_container_width=True)
 with col5:
     st.page_link("pages/99_Funding_and_Support.py", label="**Funding and Support**", use_container_width=True)
 
