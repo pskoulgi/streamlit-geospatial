@@ -67,4 +67,6 @@ st.markdown(
 
 st.image("./ones_of_india.jpg")
 
+st.write("# Our Philosophy")
+st.write("We are a generation witnessing unprecedented changes to our lands and waters, deeply impacting humans and other living beings that depend on them. We believe, therefore, that efforts to observe and map the changing fates and fortunes of earth's land cover should, as far as possible, be done in public interest. Hence, these data must not only be publicly and freely accessible, but the methods by which they are produced, too, must be open to public scrutiny. In this belief, we are making not only the outputs of our mapping public and free under a permissive MIT License, but also the input training data we have created, and the source code we have developed and used to produce our maps.")
 

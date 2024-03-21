@@ -55,9 +55,6 @@ def colour_cells(val):
 
 def app():
     
-    st.write("# Our Philosophy")
-    st.write("We are a generation witnessing unprecedented changes to our lands and waters, deeply impacting humans and other living beings that depend on them. We believe, therefore, that efforts to observe and map the changing fates and fortunes of earth's land cover should, as far as possible, be done in public interest. Hence, these data must not only be publicly and freely accessible, but the methods by which they are produced, too, must be open to public scrutiny. In this belief, we are making not only the outputs of our mapping public and free under a permissive MIT License, but also the input training data we have created, and the source code we have developed and used to produce our maps.")
-    
     st.write("# Source Code")
     st.write("The source code used to produce the maps will be available on our [openlandcover GitHub repository](https://github.com/openlandcover/) when it is ready. The repository contains the code used to train the models, the code used to produce the maps, and the code used to produce the data visualisations. The code is available under the MIT License, which is a permissive open source license. While not required, we would appreciate if you attribute the source if and when you use these data or code.")
     st.write("**Suggested citation:** Koulgi, PS & Madhusudan, MD (2024) Open Land Cover Mapping of India's Semi-arid Open Natural Ecosystems. https://one-india.streamlit.app/")
