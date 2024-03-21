@@ -23,6 +23,8 @@ st.sidebar.markdown(
     """
 )
 
+st.sidebar.title("[Contact Us](https://forms.gle/r4NiLoEjVRaHoTE48)")
+
 col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:

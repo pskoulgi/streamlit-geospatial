@@ -42,6 +42,8 @@ st.sidebar.markdown(
     """
 )
 
+st.sidebar.title("[Contact Us](https://forms.gle/r4NiLoEjVRaHoTE48)")
+
 def app():
     st.title("Funding and support")
     st.markdown(

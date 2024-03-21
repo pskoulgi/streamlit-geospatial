@@ -43,6 +43,7 @@ st.sidebar.markdown(
     """
 )
 
+st.sidebar.title("[Contact Us](https://forms.gle/r4NiLoEjVRaHoTE48)")
 
 # Function to style header
 def style_header(s):
