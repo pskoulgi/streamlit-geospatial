@@ -62,7 +62,7 @@ def app():
     
     st.write("## A word on known issues and limitations")
     st.write("""
-             Our maps are a work in progress, and as we made them, we have seen many of their limitations. As we endeavour to improve them, we welcome your feedback and suggestions. 
+             Our maps are a work in progress, and as we made them, we have seen many of their limitations. As we endeavour to improve them, we welcome your feedback and suggestions, you can [contact us here](https://forms.gle/r4NiLoEjVRaHoTE48). 
              
              Specifically, as you access and use these maps, here are a few points about the map to be mindful of:
              * These maps largely pertain to the Semi-Arid Lowland regions of India, i.e., areas <= 1,000 m ASL elevation, receiving <= 1200 mm annual rainfall, and may not be directly applicable to other regions. While we have not masked results from areas of higher rainfall, or greater elevations, our labels may not work best in such areas.
@@ -72,13 +72,13 @@ def app():
                  * Agriculture-High Biomass and Forests/Woodland Savannas (especially crops such as coffee, areca nut, and rubber)
                  * Open Savannas and Shrub Savannas
                  * Woodland Savannas and Forests
-             * While we have made every effort to ensure that our labels are as accurate as possible, we are aware that there are many areas where our labels may not be accurate. We are working to improve these labels, and welcome your feedback on how we can do so.
+             * While we have made every effort to ensure that our labels are as accurate as possible, we are aware that there are many areas where our labels may not be accurate. We are working to improve these labels, and welcome your feedback on how we can do so. You can [contact us here](https://forms.gle/r4NiLoEjVRaHoTE48).
              """)
     
     "&nbsp;"
     
     st.write("# Data Access")
-    st.write("The data are publicly available for use on the Google Earth Engine platform at `projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/landcover_hier`, from where they may be used directly in further analyses, or select bands can be downloaded for specific areas of interest, as required. Metadata pertaining to this dataset are presented below.")
+    st.write("The data are publicly available for use on the Google Earth Engine platform as an image raster at `projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/landcover_hier`, from where they may be used directly in further analyses, or select bands can be downloaded for specific areas of interest, as required. Metadata pertaining to this dataset are presented below.")
     st.write("To help you get started, here is a Google Earth Engine [starter script](https://code.earthengine.google.co.in/02585ca79a284e0be81441c24f8653a7) to load and visualise the data. (Note: Google Earth Engine account needed to run this script)")
     
     band_names = pd.read_excel("./band_data.xlsx", sheet_name="bandData")
