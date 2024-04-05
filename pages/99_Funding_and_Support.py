@@ -76,6 +76,7 @@ def app():
     * [Google Earth Engine Developers Group](https://groups.google.com/g/google-earth-engine-developers)
     * [Google Earth Engine on Stack Exchange](https://gis.stackexchange.com/questions/tagged/google-earth-engine)
     * [QGIS](https://qgis.org/)
+    * Yoni Gavish of [*Gavish et al. (2018)*](https://doi.org/10.1016/j.isprsjprs.2017.12.002)
     * Multiple publicly-funded central and state government portals and repositories
     
     These analyses were carried out on the [Google Earth Engine](https://earthengine.google.com/)
