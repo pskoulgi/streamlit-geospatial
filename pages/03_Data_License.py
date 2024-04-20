@@ -26,7 +26,7 @@ st.divider()
 st.sidebar.title("Project Repository")
 st.sidebar.info(
     """
-    [https://github.com/openlandcover/](https://github.com/openlandcover/)
+    [https://github.com/openlandcover/one7types](https://github.com/openlandcover/one7types)
     """
 )
 
@@ -57,7 +57,7 @@ def colour_cells(val):
 def app():
     
     st.write("# Source Code")
-    st.write("The source code used to produce the maps will be available on our [openlandcover GitHub repository](https://github.com/openlandcover/) when it is ready. The repository contains the code used to train the models, the code used to produce the maps, and the code used to produce the data visualisations. The code is available under the MIT License, which is a permissive open source license. While not required, we would appreciate if you attribute the source if and when you use these data or code.")
+    st.write("The source code used to produce the maps will be available on our [openlandcover GitHub repository](https://github.com/openlandcover/one7types) when it is ready. The repository contains the code used to train the models, the code used to produce the maps, and the code used to produce the data visualisations. The code is available under the MIT License, which is a permissive open source license. While not required, we would appreciate if you attribute the source if and when you use these data or code.")
     st.write("**Suggested citation:** Koulgi, PS & Madhusudan, MD (2024) Open Land Cover Mapping of India's Semi-arid Open Natural Ecosystems. https://one-india.streamlit.app/")
     
     st.write("## A word on known issues and limitations")
