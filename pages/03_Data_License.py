@@ -26,7 +26,7 @@ st.divider()
 st.sidebar.title("Project Repository")
 st.sidebar.info(
     """
-    [https://github.com/openlandcover/](https://github.com/openlandcover/)
+    [https://github.com/openlandcover/](https://github.com/openlandcover/one7types)
     """
 )
 
@@ -43,6 +43,7 @@ st.sidebar.markdown(
     """
 )
 
+st.sidebar.title("[Contact Us](https://forms.gle/r4NiLoEjVRaHoTE48)")
 
 # Function to style header
 def style_header(s):
@@ -59,7 +60,7 @@ def app():
     st.write("We are a generation witnessing unprecedented changes to our lands and waters, deeply impacting humans and other living beings that depend on them. We believe, therefore, that efforts to observe and map the changing fates and fortunes of earth's land cover should, as far as possible, be done in public interest. Hence, these data must not only be publicly and freely accessible, but the methods by which they are produced, too, must be open to public scrutiny. In this belief, we are making not only the outputs of our mapping public and free under a permissive MIT License, but also the input training data we have created, and the source code we have developed and used to produce our maps.")
     
     st.write("# Source Code")
-    st.write("The source code used to produce the maps will be available on our [openlandcover GitHub repository](https://github.com/openlandcover/) when it is ready. The repository contains the code used to train the models, the code used to produce the maps, and the code used to produce the data visualisations. The code is available under the MIT License, which is a permissive open source license. While not required, we would appreciate if you attribute the source if and when you use these data or code.")
+    st.write("The source code used to produce the maps will be available on our [openlandcover GitHub repository](https://github.com/openlandcover/one7types) when it is ready. The repository contains the code used to train the models, the code used to produce the maps, and the code used to produce the data visualisations. The code is available under the MIT License, which is a permissive open source license. While not required, we would appreciate if you attribute the source if and when you use these data or code.")
     st.write("**Suggested citation:** Koulgi, PS & Madhusudan, MD (2024) Open Land Cover Mapping of India's Semi-arid Open Natural Ecosystems. https://one-india.streamlit.app/")
     
     st.write("## A word on known issues and limitations")
@@ -80,7 +81,7 @@ def app():
     "&nbsp;"
     
     st.write("# Data Access")
-    st.write("The data are publicly available for use on the Google Earth Engine platform at `projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/landcover_hier`, from where they may be used directly in further analyses, or select bands can be downloaded for specific areas of interest, as required. Metadata pertaining to this dataset are presented below.")
+    st.write("The data are publicly available for use on the Google Earth Engine platform as an image raster at `projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/landcover_hier`, from where they may be used directly in further analyses, or select bands can be downloaded for specific areas of interest, as required. Metadata pertaining to this dataset are presented below.")
     st.write("To help you get started, here is a Google Earth Engine [starter script](https://code.earthengine.google.co.in/02585ca79a284e0be81441c24f8653a7) to load and visualise the data. (Note: Google Earth Engine account needed to run this script)")
     
     band_names = pd.read_excel("./band_data.xlsx", sheet_name="bandData")
