@@ -26,7 +26,7 @@ st.divider()
 st.sidebar.title("Project Repository")
 st.sidebar.info(
     """
-    [https://github.com/openlandcover/](https://github.com/openlandcover/one7types)
+    [https://github.com/openlandcover/one7types](https://github.com/openlandcover/one7types)
     """
 )
 
