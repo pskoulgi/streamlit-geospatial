@@ -85,7 +85,7 @@ def app():
     st.write("To help you get started, here is a Google Earth Engine [starter script](https://code.earthengine.google.co.in/02585ca79a284e0be81441c24f8653a7) to load and visualise the data. (Note: Google Earth Engine account needed to run this script)")
     
     band_names = pd.read_excel("./band_data.xlsx", sheet_name="bandData")
-    band_names = band_names.convert_dtypes()
+    band_names = band_names.astype(str)
     band_names_styled = band_names.style.apply(style_header, axis=1)
     st.write("## Summary of Bands in the Dataset")
     st.dataframe(band_names_styled, height = 670, use_container_width=True, hide_index=True)
