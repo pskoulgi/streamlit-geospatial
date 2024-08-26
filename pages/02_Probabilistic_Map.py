@@ -60,18 +60,30 @@ def app():
     oneAgrOthRgb = ee.Image.cat([agrProb, oneProb, othProb])
 
     m.add_basemap("SATELLITE")
-    left_layer = geemap.ee_tile_layer(l1Probs, {"bands": ["prob_one"], "min": 0, "max": 1, "palette": ["1a2b2b", matplotlib.colors.cnames["navajowhite"]]}, name = "ONE probabilities")
-    right_layer = geemap.ee_tile_layer(oneAgrOthRgb, {"min": 0, "max": 1}, name = "Agri-ONE-Forest probabilities")
-    m.split_map(left_layer, right_layer)
+    # left_layer = geemap.ee_tile_layer(l1Probs, {"bands": ["prob_one"], "min": 0, "max": 1, "palette": ["1a2b2b", matplotlib.colors.cnames["navajowhite"]]}, name = "ONE probabilities")
+    # right_layer = geemap.ee_tile_layer(oneAgrOthRgb, {"min": 0, "max": 1}, name = "Agri-ONE-Forest probabilities")
+    # m.split_map(left_layer, right_layer)
+
+    # st.markdown(
+    #     """
+    #     In the map above, the left panel shows the probability of Open Natural Ecosystems (ONE) at the 
+    #     Level-1 classification (ONE / Non-ONE), while the right panel aggregates the probability of Agriculture (Red), 
+    #     ONEs (Green), and Forest (Blue) at the Level-2 classification. The brighter and greener a pixel 
+    #     in the right panel, the higher the probability that it is an ONE; likewise, brighter and redder 
+    #     a pixel, the higher the probability that it is Agriculture, and the brighter and bluer a pixel, 
+    #     the higher the probability that it is Forest.
+    #     """
+    # )
+
+    m.addLayer(oneAgrOthRgb, {"min": 0, "max": 1}, "Agri-ONE-Forest probabilities")
 
     m.to_streamlit(height = 768)
 
     st.markdown(
         """
-        In the map above, the left panel shows the probability of Open Natural Ecosystems (ONE) at the 
-        Level-1 classification (ONE / Non-ONE), while the right panel aggregates the probability of Agriculture (Red), 
-        ONEs (Green), and Forest (Blue) at the Level-2 classification. The brighter and greener a pixel 
-        in the right panel, the higher the probability that it is an ONE; likewise, brighter and redder 
+        The map above illustrates the probabilistic component of the map dataset. It visualizes aggregates the
+        probability of Agriculture (Red), ONEs (Green), and Forest (Blue) at once. The brighter and greener a pixel,
+        the higher the probability that it is an ONE; likewise, brighter and redder 
         a pixel, the higher the probability that it is Agriculture, and the brighter and bluer a pixel, 
         the higher the probability that it is Forest.
         """
