@@ -132,6 +132,7 @@ def app():
     # m.add_legend(title = "ONE types", legend_dict = oneTypeslegendDict, draggable = False)
     # m.add_legend(title = "ONE", legend_dict = onelegendDict, position = "bottomleft", draggable = False)
     m.addLayer(l2Labels, oneTypes_vis_params, "ONE")
+    m.add_legend(title = "ONE types", legend_dict = oneTypeslegendDict, draggable = False)
 
     m.to_streamlit(height = 768)
 
