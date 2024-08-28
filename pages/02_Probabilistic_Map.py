@@ -47,7 +47,7 @@ st.divider()
 def app():
     st.title("Probabilistic Map of Open Natural Ecosystems", anchor = "landcovers-probabilistic")
 
-    m = geemap.Map(center=(21, 79), zoom=5.2)
+    m = geemap.Map(center=(21, 79), zoom=5.2, control_scale=True)
 
     mapRaster = ee.Image("projects/ee-open-natural-ecosystems/assets/publish/onesWith7Classes/landcover_hier")
     l2OneProbs = mapRaster.select(["prob_one_.*"]).divide(1e4)
