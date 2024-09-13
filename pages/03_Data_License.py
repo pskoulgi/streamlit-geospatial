@@ -57,8 +57,8 @@ def colour_cells(val):
 def app():
     
     st.write("# Source Code")
-    st.write("The source code used to produce the maps is available in [a GitHub repository](https://github.com/openlandcover/one7types). The repository contains the code used to train the models and produce the maps. The code is available under the MIT License, which is a permissive open source license. While not required, we would appreciate if you attribute the source if and when you use these data or code.")
-    # st.write("**Sugge`sted citation:** Koulgi, PS & Madhusudan, MD (2024) Open Land Cover Mapping of India's Semi-arid Open Natural Ecosystems. https://one-india.streamlit.app/")
+    st.write("The source code used to produce the maps and more details about the dataset are available in [a GitHub repository](https://github.com/openlandcover/one7types). The repository contains the code used to train the models and produce the maps. The code is available under the MIT License, which is a permissive open source license. While not required, we would appreciate if you attribute the source if and when you use these data or code.")
+    st.info("**Suggested citation:** Pradeep Koulgi & MD Madhusudan (2024). Mapping landcover in India's Open Natural Ecosystems (ONEs). https://github.com/openlandcover/one7types/.")
     
     st.write("## A word on known issues and limitations")
     st.write("""
